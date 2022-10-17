@@ -1,0 +1,2 @@
+# cloneStove
+Stove page clone
