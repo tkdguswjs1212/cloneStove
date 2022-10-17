@@ -50,6 +50,8 @@ a:hover , button:hover{
     z-index: 51;
     position: absolute;    
     top: 0;
+    display: none;
+    
 }
 
 .Bmenu{
@@ -87,6 +89,25 @@ a:hover , button:hover{
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.Bmenu ul:nth-of-type(1){
+    display: flex;
+}
+.Bmenu ul:nth-of-type(1) > li{
+    width: 94px;
+    height: 70px;
+    margin: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+.Bmenu ul:nth-of-type(1) > li > div{
+    width: 36px;
+    height: 36px;
 }
 
 
