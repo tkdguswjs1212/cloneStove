@@ -45,14 +45,14 @@ a:hover , button:hover{
 /* 버거메뉴 */
 .bgmenu{
     background-color:rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 100%; 
     height: 100%;
     z-index: 51;
     position: absolute;    
-    top: 0;
+    top: 0;  
     display: none;
-    
 }
+
 
 .Bmenu{
     position: absolute;
@@ -62,6 +62,7 @@ a:hover , button:hover{
     width: 50%;
     height: 100%;
     z-index: 50;
+    
 }
 
 .Bmenu img{    width: 100%;}
@@ -98,16 +99,44 @@ a:hover , button:hover{
     width: 94px;
     height: 70px;
     margin: 0 0;
+    padding: 12px 16px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;    
+    
+}
+.Bmenu ul:nth-of-type(1) > li> span{
+    font-size: 12px;
+}
+    
+
+.Bmenu ul:nth-of-type(1) > li > div{
+    width: 24px;
+    height: 24px;
+}
+
+.Bmenu > div:nth-child(3){
+    display: flex; 
+    justify-content: end;   
+    width: 100%;
+    height: 88px;
+    background-color: #fe763c;
+}
+
+
+
+.Bmenu > div:nth-child(3) > div{
+    margin: 0;    
+    background-image: url(../TestImg/img-banner-app-icon.png);
+    background-size: auto 88px;
+    background-repeat: no-repeat;
     
     
 }
 
-.Bmenu ul:nth-of-type(1) > li > div{
-    width: 36px;
-    height: 36px;
+.Bmenu > div:nth-child(3) > div > p{
+    
+    
 }
 
 
@@ -1393,7 +1422,7 @@ h2{
     /* 배너 슬라이드 */
     .slider{
         width: 100%;
-        height: 360px;
+        min-height: 195px;
         position: relative;
         
         overflow: hidden;
@@ -1403,8 +1432,9 @@ h2{
         display: none;
     }
     
-    ul.imgs{
+    .imgs{
         padding: 0;
+        min-height: 195px;
         margin: 0 auto;
         width: 100%;
         list-style: none;
@@ -1422,6 +1452,7 @@ h2{
     
     .bullets{
         position: absolute;
+        
         left: 95%;  
         top: 90%;      
         height: 30px;
