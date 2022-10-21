@@ -156,7 +156,7 @@
                         </ul>
                     </div>
                     <div class=" hdiv-02-02" >
-                        <span><img src="./TestImg/ic-navigation-apps-fill-enabled.svg"></span>
+                        <button class="bmenuSpan"><img src="./TestImg/ic-navigation-apps-fill-enabled.svg"></button>
                         <div class="hdiv-02-02-m">
                             <div class="hdiv-02-02-m-01">
                                 <ul>
@@ -283,18 +283,14 @@
                 </div>
             </div>           
         </header>
-        <div class="bgmenu"> <!-- 버거메뉴 -->
+   
+        <div class="bgmenu" id="bgmenu"> <!-- 버거메뉴 -->
             <div class="Bmenu">
                 <div>
                     <div><img src="./TestImg/miss_profile_36x36.png"></div>
                     <div><span>로그인</span>후 이용하세요</div>
-                    <div><button><img src="./TestImg/ic-control-close-line.svg"></button>
-                        <script>
-                            const menu = document.querySelectorAll('.Bmenu');
-                            const exit = document.querySelectorAll('.Bmenu button');
-                                                    
-                        </script>
-                    </div>
+                    <div class="exit"><button><img src="./TestImg/ic-control-close-line.svg"></button>                        
+                    </div>                    
                 </div>
                 <ul>
                     <li>
@@ -316,10 +312,83 @@
                 </ul>
                 <div>
                     <div>
-                        <p>STOVE 모바일앱으로<br>더욱 편리한 게임생활을 즐겨보세요</p>    
+                        <p>STOVE 모바일앱으로<br>더욱 편리한 게임생활을 즐겨보세요</p>
+                    </div> 
+                    <script>
+                        // bmenuSpan hdiv-01
+                        const Condition01 = document.querySelector('.hdiv-01');
+                        const Condition02 = document.querySelector('.bmenuSpan');
+                        const Exit = document.querySelector('.exit');
 
-                    </div>                   
+                        function test(){                                                       
+                            
+                            Condition02.addEventListener('click',function(){
+                                document.getElementById("bgmenu").style.display ='block';
+                            });
+                            Exit.addEventListener('click',function(){
+                                document.getElementById("bgmenu").style.display ='none';
+                            });
+                            
+                        };
+                        var clientWidth = document.querySelector('.main').clientWidth;
+                        if(clientWidth <= 768 ){
+                            test();
+                        }
+                        else{
+
+                        }
+
+                    
+                        
+                                                  
+                    </script>                  
                 </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a><img src="./TestImg/ic-hardware-smartphone-line-enabled-m.svg" alt=""></a>
+                            <span>모바일게임</span>
+                        </li>
+                        <li>
+                            <a><img src="./TestImg/ic-hardware-desktop-line-enabled-m.svg" alt=""></a>
+                            <span>PC게임</span>
+                        </li>
+                        <li>
+                            <a><img src="./TestImg/ic-object-game-line-enabled-m.svg" alt=""></a>
+                            <span>인디게임</span>
+                        </li>
+                        <li>
+                            <a><img src="./TestImg/ic-navigation-toonspoon-line-enabled-m.svg" alt=""></a>
+                            <span>툰스푼</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a><img src="./TestImg/ic-navigation-security-line-enabled-m.svg" alt=""></a>
+                            <span>보안설정</span>
+                        </li>
+                        <li>
+                            <a><img src="./TestImg/ic-object-help-center-line-enabled-m.svg" alt=""></a>
+                            <span>고객센터</span>
+                        </li>
+                        <li>
+                            <a><img src="./TestImg/ic-object-report-line-enabled-m.svg" alt=""></a>
+                            <span>신고센터</span>
+                        </li>
+                        <li>
+                            <a><img src="./TestImg/ic-navigation-language-line-enabled.svg" alt=""></a>
+                            <span>한국어</span>
+                        </li>
+                    </ul>
+                </div>
+                <footer>
+                    <div>
+                        <a href="http://127.0.0.1:5500/Test-01/Test-02.html"><span>로그인</span></a>
+                    </div>                   
+                </footer>
+                
             </div>
         </div>
         <div class="middiv">
@@ -330,15 +399,17 @@
                         <input type="radio" name="slide" id="slide2">
                         <input type="radio" name="slide" id="slide3">
                         <ul id="imgholder" class="imgs">
-                            <li><img src="./TestImg/메인_01_통합형배너_스토브보안_main_long_LMS.png"></li>
+                            <li><img src="./TestImg/메인_01_통합형배너_스토브보안_main_long_LMS.png">             
+                            </li>
                             <li><img src="./TestImg/메인_01_메인통합배너_main_long_LMS_센추리.jpg"></li>
                             <li><img src="./TestImg/메인_01_메인통합형배너_9월3주_main_long_LMS_1664533389724.jpg"></li>
+                            <div class="bullets">
+                                <label for="slide1">&nbsp;</label>
+                                <label for="slide2">&nbsp;</label>
+                                <label for="slide3">&nbsp;</label>
+                            </div>
                         </ul>
-                        <div class="bullets">
-                            <label for="slide1">&nbsp;</label>
-                            <label for="slide2">&nbsp;</label>
-                            <label for="slide3">&nbsp;</label>
-                        </div>
+                       
                     </div>
                     <div>
                         <a><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/(CAoA)드래곤관찰일지_온스토브메인_세로형(1).png")드래곤관찰일지_온스토브메인_세로형(1).png"></a>
