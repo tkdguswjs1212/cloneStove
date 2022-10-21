@@ -31,7 +31,7 @@
                 <div class="hdiv-01">
                     <div>
                         <span><a href="#">PC게임</a></span> 
-                        <!-- <ul class="HideMune-01">
+                        <ul class="HideMune-01">
                             <li>
                                 <a><img src="./TestImg/500_500_1597184530.png"></a>
                                 <div>
@@ -80,7 +80,7 @@
                                     </div>                                    
                                 </div>
                             </li>
-                        </ul>   -->                                                                 
+                        </ul>                                                                
                     </div>                    
                     <div>
                         <span><a>모바일게임</a></span>
@@ -278,7 +278,7 @@
                         </div>
                     </div>
                     <div>
-                        <span><a href="http://127.0.0.1:5500/Test-01/Test-02.html">로그인</a></span>
+                        <span><a href="Test-02.html">로그인</a></span>
                     </div>
                 </div>
             </div>           
@@ -329,17 +329,10 @@
                                 document.getElementById("bgmenu").style.display ='none';
                             });
                             
-                        };
-                        var clientWidth = document.querySelector('.main').clientWidth;
-                        if(clientWidth <= 768 ){
+                        };                        
+                        if(window.innerWidth <= 768 ){
                             test();
-                        }
-                        else{
-
-                        }
-
-                    
-                        
+                        }    
                                                   
                     </script>                  
                 </div>
@@ -385,7 +378,7 @@
                 </div>
                 <footer>
                     <div>
-                        <a href="http://127.0.0.1:5500/Test-01/Test-02.html"><span>로그인</span></a>
+                        <a href="Test-02.html"><span>로그인</span></a>
                     </div>                   
                 </footer>
                 
@@ -666,8 +659,8 @@
                         <img src="https://www.onstove.com/assets/images/main/game-exhibition-img13.png">
                         <span>STOVE 인디게임<br>더 보러가기</span>
                     </a>
-                </li>                
-            </ul>
+                </li>                              
+            </ul>          
         </div>
         <div class="mhdiv-05">
             <ul>
@@ -680,7 +673,8 @@
                     <span>STOVE 클라이언트와<br>앱을 설치해 보세요.</span>
                 </li>
             </ul>
-        </div>
+        </div> 
+        
         <div class="enddiv">
             <footer>
                 <ul>
