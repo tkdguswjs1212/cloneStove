@@ -92,7 +92,9 @@
 
 .mlg > li > input{
     width: 100%;
-    
+    padding-left: 25px;
+    font-size: 18px;
+    z-index: 10;
 }
 
 .mlg > li:nth-of-type(1) > input{

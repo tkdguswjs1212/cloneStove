@@ -8,7 +8,7 @@ img{
    
 }
 
-
+.condivm-02-menu{display: none;  margin-right: 0;}
 
 button{
     background-color: #fff;
@@ -223,7 +223,7 @@ a:hover , button:hover{
 .hdiv-02 > div:nth-of-type(1){
     position: relative;
 }
-.hdiv-02 > div:nth-of-type(1) > ul{
+.hdiv-02-menu01{
 
     position: absolute;
     margin-top: 12px ;
@@ -475,20 +475,80 @@ a:hover , button:hover{
     text-decoration:underline;
     color: #000;
 }
+.hdiv-01 div:nth-of-type(1){
+    position: relative;
+    
+}
+.hdiv-01 div:nth-of-type(2){
+    position: relative;
+    
+}
+.hdiv-01 div:nth-of-type(3){
+    position: relative;
+    
+}
+/* 슬라이더 */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }  
+
+  .swiper-button-prev::after{
+    color: #fff;       
+    width: 150px;
+    text-align: left;
+    }
+    
+    
+
+  .swiper-button-next::after{
+    color: #ddd;  
+    width: 150px;
+    text-align: right;
+    
+  }
+  /* 슬라이드 */
+/* ----------왼쪽상단메뉴 ----------*/
+        /* 01번메뉴 */
 .HideMune-01{
     width: 340px;
     height: 464px;
     background-color: #fff;
     border-radius: 15px;
-    z-index: 3;
-    
+    z-index: 3;  
 }
-.hdiv-01 div:nth-of-type(1){
-    position: relative;
-    
-}
-
 .HideMune-01{
     padding: 24px;    
     margin-top: 26px;
@@ -496,8 +556,7 @@ a:hover , button:hover{
     flex-wrap: wrap;
     position: absolute;
     top: 15px;   
-    
-
+    display: none;
 }
 .HideMune-01 >li{    
     display: flex;
@@ -517,86 +576,98 @@ a:hover , button:hover{
 }
 .HideMune-01 button{
     margin-top: 8px;    
-    background-color:  #f6f7fa
-    
+    background-color:  #f6f7fa   
 }
 
 .HideMune-01  b{
     font-size: 15px;
 }
-
-/* 배너 슬라이드 */
-.slider{
-    width: 860px;
-    height: 360px;
-    position: relative;
-    
-    overflow: hidden;
+        /* 01번메뉴 */
+        /* 02번메뉴 */
+.HideMune-02{
+    width: 340px;
+    height: 464px;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 3;  
 }
-
-.slider input[type=radio]{
+.HideMune-02{
+    padding: 24px;    
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 15px;   
     display: none;
 }
-
-ul.imgs{
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.HideMune-02 >li{    
+    display: flex;
+    width: 292px;
+    height: 76;
+}
+.HideMune-02  img{
+    margin-right: 15px ;
+    width: 50px;
+    height: 50px;
 }
 
-ul.imgs li{
+.HideMune-02  span{
+    color: rgb(216, 105, 216);
+    font-size: 13px;
+    font-weight: bold;
+}
+.HideMune-02 button{
+    margin-top: 8px;    
+    background-color:  #f6f7fa   
+}
+
+.HideMune-02  b{
+    font-size: 15px;
+}
+        /* 02번메뉴 */
+        /* 03번메뉴 */
+.HideMune-03{
+    width: 340px;
+    height: 464px;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 3;  
+}
+.HideMune-03{
+    padding: 24px;    
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
-    left: 860px;
-    transition-delay: 1s;
-
-    padding: 0;
-    margin: 0;
+    top: 15px;   
+    display: none;
+}
+.HideMune-03 >li{    
+    display: flex;
+    width: 292px;
+    height: 76;
+}
+.HideMune-03  img{
+    margin-right: 15px ;
+    width: 50px;
+    height: 50px;
 }
 
-.bullets{
-    
-    position: absolute;
-    
-    left: 20%;
-    bottom: 0;
-    transform: translateX(-50%);
-    bottom: 20px;
-    z-index: 2;
+.HideMune-03  span{
+    color: rgb(216, 105, 216);
+    font-size: 13px;
+    font-weight: bold;
 }
-.bullets label{
-    display: inline-block;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.55);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
-.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
-    background-color: #fff;
-}
-.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
-    background-color: #fff;
-}
-.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-    background-color: #fff;
+.HideMune-03 button{
+    margin-top: 8px;    
+    background-color:  #f6f7fa   
 }
 
-.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
+.HideMune-03  b{
+    font-size: 15px;
 }
-.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
-}
-.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
-    left: 0;
-    transition: 0.5s;
-    z-index:1;
-}
+    /* 03번메뉴 */
+
 /* 두번째 배너 */
 
 .condiv-02{
@@ -631,19 +702,39 @@ h2{
 }
 .condiv-02-01 > li:nth-of-type(1) > button {
     width: 100%;
-    height: 100%;
-    background-color: #1a1a1a;
+    height: 100%;    
     border-radius: 0.4rem 0.4rem 0 0;
     
     
 }
+
+.condiv-02-01 > li:nth-of-type(2) > button {
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 0.4rem 0.4rem 0 0;
+    
+    
+}
+.condiv-02-01 > li:nth-of-type(3) > button {
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 0.4rem 0.4rem 0 0;
+    
+    
+}
+.condiv-02-01 > li:nth-of-type(1) > button:hover {
+    background-color: #1a1a1a;
+}
+
 .condiv-02-01 > li:nth-of-type(3) > button {
     border-radius: 0 0 0.4rem 0.4rem ;
    
 }
 
 .condiv-02-01 > li:nth-of-type(1) > button > span{
-    color: #fff;
+    
     
 }
 
@@ -663,7 +754,7 @@ h2{
 
 .simg-01 img{
     width: 1064px;
-    height: 225px;
+    height: 250px;
 }
 
 .mhdiv-01{
@@ -698,7 +789,7 @@ h2{
 
 .mhdiv-01-bg >div > div {
     
-    height: 120px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -892,12 +983,12 @@ h2{
 
 .mhdiv-03 > ul:nth-of-type(1) > li:nth-of-type(1) > button > span{
     
-    color: #fff;
+    
 }
 
 .mhdiv-03 > ul:nth-of-type(1) > li > button > span{
     font-size: 20px;
-    color: #000;
+    
     font-weight:bolder;
 
 }
@@ -1048,7 +1139,7 @@ h2{
 
 .mhdiv-05{
     
-    margin: 0 auto;
+    margin: 0 0;
     width: 1300px;
     height: 150px;
    
@@ -1071,15 +1162,16 @@ h2{
 
 .mhdiv-05 span{
     color: #fff;
+    width: 300px;
     font-weight: bold;
     font-size: 22px;
     position: absolute;
-    right: 15%;
+    left: 45%;
     top: 30%;
 }
 
 .enddiv{
-    margin-top: 6.8rem;
+    margin-top: 16.6rem;
     width: 100%;
     background-color: #1f1f1f;
     padding-top: 32px;
@@ -1627,7 +1719,7 @@ h2{
     }
     
     .condiv-02-01 > li:nth-of-type(1) > button > span{
-        color: #fff;
+       
         
     }
     
@@ -1681,14 +1773,15 @@ h2{
     }
     
     .mhdiv-01-bg >div > div {
-        
+        width: 300px; 
         height: 120px;
         display: flex;
         justify-content: center;
         align-items: center;    
     }
     
-    .mhdiv-01-bg >div > div > a >span{    
+    .mhdiv-01-bg >div > div > a >span{  
+        
         color: #fff;
         font-size: 1.2rem;
     }
@@ -1895,7 +1988,7 @@ h2{
     
     .mhdiv-03 > ul:nth-of-type(1) > li:nth-of-type(1) > button > span{
         
-        color: #fff;
+        
     }
     
     .mhdiv-03 > ul:nth-of-type(1) > li > button > span{
@@ -1998,7 +2091,7 @@ h2{
         margin-top: 3.2rem;
         padding: 0 30px;
         width: 100%;
-        
+       
         
     
     }
@@ -2066,9 +2159,9 @@ h2{
     
     .mhdiv-05{
         
-        margin: 0 auto;
+        margin: a auto;
         width: 100%;
-        padding: 0 30px;        
+               
         
        
         
@@ -2081,7 +2174,7 @@ h2{
     }
     
     .mhdiv-05 > ul > li{
-        width: 336px;
+        max-width: 336px;
         position: relative;
     }
     .mhdiv-05 > ul > li:nth-of-type(1){
@@ -2089,16 +2182,19 @@ h2{
     }
     .mhdiv-05 img{
         border-radius: 10px;
+        max-width: 336px;
         height: 100%;
     }
     
     .mhdiv-05 span{
+
         color: #fff;
         font-weight: bold;
         font-size: 14px;
         position: absolute;
-        right: 15%;
+        left: 40%;
         top: 30%;
+        width: 60%;
     }
     
     .enddiv{
@@ -2123,8 +2219,13 @@ h2{
     .enddiv li:nth-of-type(3) > div:nth-of-type(2) >  a{
         border-bottom: 1px solid #aaa;
     }
-    
+    .enddiv{
+        margin-top: 300px;
+    }
+
     .enddiv footer{
+       
+       
         margin: 0 auto;
         padding: 0 30px;
         width: 100%;    
@@ -2611,6 +2712,34 @@ h2{
         margin: 0 auto;
         margin-top: 2.0rem;
     }
+    .condivm-02-Menu{
+        border-bottom: 1px solid #90939b; 
+        margin-left: 20px;
+    }
+
+    .condivm-02-menu{
+        display: flex;
+       
+        justify-content: flex-start;
+      
+        max-width: 385px; height: 48px;       
+       
+        padding: 0;
+        
+    }
+    .condivm-02-menu button{
+       
+        width: 100%;
+        font-size: 15px;
+        font-weight: bold;
+        color: #333333;        
+        display: block;/* 블록태그로 만들어준다 */
+        text-overflow: ellipsis;/* 말줄임 css */
+        white-space: nowrap;/*글자를 한줄로 모아준다*/
+        overflow: hidden;
+        background-color: #f5f5f5;
+        text-align: left;
+    }
     
     .condiv-01{
         display: block;
@@ -2791,6 +2920,7 @@ h2{
     }
     
     .condiv-02-01{
+        display: none;
         width: 236px;    
         margin: 0;
       
@@ -2853,12 +2983,12 @@ h2{
     }
     
     .simg-01 img{
-        width: 335px;
+        width: 100%;
         height: 170px;
     }
     
     .mhdiv-01{
-        margin-top: 15.5rem;
+        margin-top: 20.5rem;
         background-color: #14160D;
         display: flex;
         justify-content: center;
@@ -2872,14 +3002,14 @@ h2{
         background-repeat: no-repeat;
         width: 100%;
         height: 120px;
-        display: flex;
+        display: flex;       
         justify-content: center;
     }
     
     .mhdiv-01-bg >div {
         width: 1300px;
         height: 120px;
-        margin: 0;
+        
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
@@ -2893,15 +3023,17 @@ h2{
         display: flex;
         justify-content: center;
         align-items: center;    
+        padding-left:  20px;        
     }
     
     .mhdiv-01-bg >div > div > a >span{    
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1.0rem;
+        
     }
     
     .mhdiv-01-bg > div > a > img{
-        width: 200px;
+        width: 100%;
         height: 100%;
        
     }
@@ -3099,7 +3231,6 @@ h2{
     
     .mhdiv-03 > ul:nth-of-type(1) > li:nth-of-type(1) > button > span{
         
-        color: #fff;
     }
     
     .mhdiv-03 > ul:nth-of-type(1) > li > button > span{
@@ -3286,6 +3417,7 @@ h2{
     }
     .mhdiv-05 > ul > li{
         position: relative;
+        margin: 0;
     }
 
     .mhdiv-05 > ul > li:nth-of-type(1){
@@ -3331,6 +3463,9 @@ h2{
     
     .enddiv li:nth-of-type(3) > div:nth-of-type(2) >  a{
         border-bottom: 1px solid #aaa;
+    }
+    .enddiv{
+        margin-top: 44.6rem;
     }
     
     .enddiv footer{

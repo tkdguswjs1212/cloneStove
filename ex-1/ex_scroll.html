@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .contents{
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%;
+            transition: 1s;
+            transform: translateY(0);
+        }
+        section{   
+            width: 100%;         
+            height: 80vh;
+            display: flex; justify-content: center;
+            align-items: center;
+            transition: 1s;
+        };
+        img{width: 100%; height: 100%;}
+        section.active{
+            background-color: #000;
+        }
+        
+      
+    </style>
+
+    <div class="contents">
+        <section><img src="./img/01.jpg"></section>        
+        <section><img src="./img/02.jpg"></section>        
+        <section><img src="./img/03.jpg"></section>        
+        <section><img src="./img/04.jpg"></section>        
+        <section><img src="./img/05.jpg"></section>        
+        <section><img src="./img/06.jpg"></section>        
+    </div>
+
+    <script>
+
+        
+        const section = document.querySelectorAll('section');
+        const contents = document.querySelector('.contents');
+        const img = document.querySelectorAll('.contents > section > img');
+        let offset = [];
+
+        document.body.style = `height:${contents.offsetHeight}px`;
+        
+        section.forEach((ele)=>{
+            offset.push(ele.offsetTop);
+            
+        });
+
+           
+        let sd = {y:0, y2:0, state:true}     
+        function scrollstate(){
+            sd.y = window.pageYOffset;
+            sd.state = (sd.y > sd.y2) ? true : false;            
+            sd.y2 = sd.y;   
+        }
+
+        let set=0, Interval;
+        let inter, Idx=0,num=0;       
+       
+         // 스크롤 기능
+        /* window.addEventListener('scroll',()=>{              
+            console.log(scrollY);
+            img[num].style = `width:100%px;transition: 1s; `;
+            scrollstate();            
+            clearTimeout(inter);
+            inter = setTimeout(()=>{
+                if(sd.state ){
+                    if(Idx<6)Idx++;
+                    if(Idx==6){Idx=0; }
+                }else{
+                    if(Idx>0)Idx--;
+                    
+                }     
+                        
+               contents.style = `transform:translateY(-${offset[Idx]}px)`;
+               img[Idx].style = `width:1300px;z-index:30;transition: 1s;`;
+            },50)          
+            num = Idx;            
+        }) */
+        
+         // 1.5초마다 실행
+         function timeset(){
+            clearInterval(Interval);
+            Interval = setInterval(()=>{               
+                img[num].style = `width:100%px;transition: 1s; `;
+                if(sd.state ){
+                    if(set<6 ){
+                        set++;
+                    }else if(set>5){
+                        set=0;
+                        window.scrollTo(0,0);
+                    }                    
+                }                          
+               contents.style = `transform:translateY(-${offset[set]}px)`;
+               img[set].style = `width:1300px;z-index:30;transition:1s;`;
+               num = set; 
+               console.log(set);
+               
+            },1500);
+            
+        }
+        timeset();
+      
+      
+    </script>
+</body>
+</html>

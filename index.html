@@ -20,6 +20,10 @@
     <meta property="twitter:title"              content="STOVE" />
     <meta property="twitter:description"        content="STOVE main site" />
     <meta property="twitter:image"              content="./TestImg/메인_01_통합형배너_스토브보안_main_long_LMS.png" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />  
 </head>
 <body>
     <div class="main">
@@ -28,9 +32,11 @@
                 <h1>
                     <a><img src="./TestImg/bi.svg"></a>
                 </h1>
+               
+               
                 <div class="hdiv-01">
                     <div>
-                        <span><a href="#">PC게임</a></span> 
+                        <span class="menu-01"><a href="#">PC게임</a></span>                         
                         <ul class="HideMune-01">
                             <li>
                                 <a><img src="./TestImg/500_500_1597184530.png"></a>
@@ -83,10 +89,112 @@
                         </ul>                                                                
                     </div>                    
                     <div>
-                        <span><a>모바일게임</a></span>
+                        <span class="menu-02"><a>모바일게임</a></span>
+                        <ul class="HideMune-02">
+                            <li>
+                                <a><img src="./TestImg/500_500_1597184530.png"></a>
+                                <div>
+                                    <b>LOST ARK</b>
+                                    <span>UPDATE</span>
+                                    <button>공식 홈페이지</button>
+                                    <button>커뮤니티</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/img_thumb_tr_1588025867.jpeg"></a>
+                                <div>
+                                    <b>테일즈런너</b>
+                                    <span>UPDATE</span>
+                                    <button>공식 홈페이지</button>
+                                    <button>커뮤니티</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/caoa_500_500.jpg"></a>
+                                <div>
+                                    <b>센추리: 에이지 오브 애쉬즈</b>
+                                    <span class="Ocolor">NEW</span>
+                                    <button>공식 홈페이지</button>
+                                    <button>커뮤니티</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/GNB_대표이미지_500_500.jpg"></a>
+                                <div>
+                                    <b>KARDS</b>
+                                    <span>UPDATE</span>
+                                    <div>
+                                        <button>공식 홈페이지</button>
+                                        <button>커뮤니티</button>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/03___ ___ ___(500X500)_1607475483.png"></a>
+                                <div>
+                                    <b>소울워커</b>
+                                    <span></span>
+                                    <div>
+                                        <button>공식 홈페이지</button>                                    
+                                    </div>                                    
+                                </div>
+                            </li>
+                        </ul> 
+                      
                     </div>
                     <div>
-                        <span><a>인디게임</a></span>
+                        <span class="menu-03"><a>인디게임</a></span>
+                        <ul class="HideMune-03">
+                            <li>
+                                <a><img src="./TestImg/500_500_1597184530.png"></a>
+                                <div>
+                                    <b>LOST ARK</b>
+                                    <span>UPDATE</span>
+                                    <button>공식 홈페이지</button>
+                                    <button>커뮤니티</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/img_thumb_tr_1588025867.jpeg"></a>
+                                <div>
+                                    <b>테일즈런너</b>
+                                    <span>UPDATE</span>
+                                    <button>공식 홈페이지</button>
+                                    <button>커뮤니티</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/caoa_500_500.jpg"></a>
+                                <div>
+                                    <b>센추리: 에이지 오브 애쉬즈</b>
+                                    <span class="Ocolor">NEW</span>
+                                    <button>공식 홈페이지</button>
+                                    <button>커뮤니티</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/GNB_대표이미지_500_500.jpg"></a>
+                                <div>
+                                    <b>KARDS</b>
+                                    <span>UPDATE</span>
+                                    <div>
+                                        <button>공식 홈페이지</button>
+                                        <button>커뮤니티</button>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a><img src="./TestImg/03___ ___ ___(500X500)_1607475483.png"></a>
+                                <div>
+                                    <b>소울워커</b>
+                                    <span></span>
+                                    <div>
+                                        <button>공식 홈페이지</button>                                    
+                                    </div>                                    
+                                </div>
+                            </li>
+                        </ul> 
+                          
                     </div>
                 </div>
                 <div class="hdiv-02">
@@ -313,8 +421,84 @@
                 <div>
                     <div>
                         <p>STOVE 모바일앱으로<br>더욱 편리한 게임생활을 즐겨보세요</p>
-                    </div> 
+                    </div>                     
                     <script>
+                        
+                        const hideMenuBtn = document.querySelector('.menu-01');                     
+                        const hideMenu = document.querySelector('.HideMune-01');
+                        const hideMenuBtn1 = document.querySelector('.menu-02');                     
+                        const hideMenu1 = document.querySelector('.HideMune-02');
+                        const hideMenuBtn2 = document.querySelector('.menu-03');                     
+                        const hideMenu2 = document.querySelector('.HideMune-03');
+                        const menu02btn = document.querySelector('.hdiv-02 > div > button');                     
+                        const menu02menu = document.querySelector('.hdiv-02-menu01');
+                        const menu03btn = document.querySelector('.bmenuSpan');                     
+                        const menu03menu = document.querySelector('.hdiv-02-02-m');
+                        let ck=0;
+                        function clickMenu(menuBtn,hideMenu,displayTpye){
+                            menuBtn.addEventListener('click',function(){ 
+                            ck++;                                   
+                            
+                            if(ck == 1 ){                              
+                                hideMenu.style.display = displayTpye;
+                            }else if(ck >1){
+                                ck=0;
+                                hideMenu.style.display = `none`;
+                            }
+                            });
+                        };
+                        clickMenu(menu02btn,menu02menu,`block`);
+
+                        menu03btn.addEventListener('click',function(){ 
+                            ck++;                                   
+                            
+                            if(ck == 1 && (window.innerWidth > 1440)){                              
+                                menu03menu.style.display = `flex`;
+                            }else if(ck >1){
+                                ck=0;
+                                menu03menu.style.display = `none`;
+                            }
+                        });  
+
+                       
+                        
+
+                        hideMenuBtn.addEventListener('click',function(){ 
+                            ck++;                                    
+                            
+                            if(ck == 1){
+                                hideMenu1.style.display = `none`;
+                                hideMenu2.style.display = `none`;
+                                hideMenu.style.display = `flex`;
+                            }else if(ck >1){
+                                ck=0;
+                                hideMenu.style.display = `none`;
+                            }
+                        });  
+                        hideMenuBtn1.addEventListener('click',function(){ 
+                            ck++;                                    
+                           
+                            if(ck == 1){
+                                hideMenu.style.display = `none`;
+                                hideMenu2.style.display = `none`;
+                                hideMenu1.style.display = `flex`;
+                            }else if(ck >1){
+                                ck=0;
+                                hideMenu1.style.display = `none`;
+                            }
+                        }); 
+                        hideMenuBtn2.addEventListener('click',function(){ 
+                            ck++;                                    
+                           
+                            if(ck == 1){
+                                hideMenu1.style.display = `none`;
+                                hideMenu.style.display = `none`;
+                                hideMenu2.style.display = `flex`;
+                            }else if(ck >1){
+                                ck=0;
+                                hideMenu2.style.display = `none`;
+                            }
+                        });                       
                         // bmenuSpan hdiv-01
                         const Condition01 = document.querySelector('.hdiv-01');
                         const Condition02 = document.querySelector('.bmenuSpan');
@@ -332,7 +516,7 @@
                         };                        
                         if(window.innerWidth <= 768 ){
                             test();
-                        }    
+                        }
                                                   
                     </script>                  
                 </div>
@@ -388,21 +572,83 @@
             <div class="condiv">
                 <div class="condiv-01">
                     <div class="slider">
-                        <input type="radio" name="slide" id="slide1" checked>
-                        <input type="radio" name="slide" id="slide2">
-                        <input type="radio" name="slide" id="slide3">
-                        <ul id="imgholder" class="imgs">
-                            <li><img src="./TestImg/메인_01_통합형배너_스토브보안_main_long_LMS.png">             
-                            </li>
-                            <li><img src="./TestImg/메인_01_메인통합배너_main_long_LMS_센추리.jpg"></li>
-                            <li><img src="./TestImg/메인_01_메인통합형배너_9월3주_main_long_LMS_1664533389724.jpg"></li>
-                            <div class="bullets">
-                                <label for="slide1">&nbsp;</label>
-                                <label for="slide2">&nbsp;</label>
-                                <label for="slide3">&nbsp;</label>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src=""></div>
+                              <div class="swiper-slide"><img src=""></div>
+                              <div class="swiper-slide"><img src=""></div>  
+                              <div class="swiper-slide"><img src=""></div>
+                              <div class="swiper-slide"><img src=""></div>  
+                              <div class="swiper-slide"><img src=""></div>                                   
                             </div>
-                        </ul>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                          </div>  
+                           <!-- Swiper JS -->
+                        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+                        <!-- Initialize Swiper -->
+                        <script>
+                        var swiper = new Swiper(".mySwiper", {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                            autoplay : true,
+                            loop: true,
+                            pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                            },
+                            navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                            },
+                        });
+                        let num2=1;
+                        const swiperwrapper = document.querySelectorAll('.swiper-wrapper > div > img')
+                      /*   function time(sec){
+                            setTimeout(function(){
+                            
+                            if(num2 < 6){
+                                num2++;
+                            }else{
+                                num2 =1;
+                            }
+                            time(num2);
+                            console.log(num2);
+                            },2000);
+                            
+                            swiperwrapper.forEach((ele,key)=>{
+                            ele.src = `./TestImg/0${num2}.jpg`;
+                           
+                            if(key == 7)
+                            {
+                                ele.src = `./TestImg/0${1}.jpg`;
+                            }else if(key == 0)
+                            {
+                                ele.src = `./TestImg/0${6}.jpg`;
+                            }           
+                            
+                        })
+                        };
                        
+                        time();
+                         */
+                        swiperwrapper.forEach((ele,key)=>{
+                            ele.src = `./TestImg/0${key}.jpg`;
+                           
+                            if(key == 7)
+                            {
+                                ele.src = `./TestImg/0${1}.jpg`;
+                            }else if(key == 0)
+                            {
+                                ele.src = `./TestImg/0${6}.jpg`;
+                            }
+                         }); 
+                       
+                        
+                        
+                        </script>                     
                     </div>
                     <div>
                         <a><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/(CAoA)드래곤관찰일지_온스토브메인_세로형(1).png")드래곤관찰일지_온스토브메인_세로형(1).png"></a>
@@ -413,16 +659,55 @@
                 </div>
                 <div class="condiv-02">
                     <h2>STOVE 인기게임!</h2>
+                    <div class="condivm-02-Menu">
+                        <div class="condivm-02-menu">
+                            <button>LOST ARK</button>
+                            <button>센츄리:에이지 오브 애쉬즈</button>
+                            <button>테일즈런너</button>
+                        </div>                        
+                    </div>
                     <div class="condivm-02">
+                       
                         <ul class="condiv-02-01">
                             <li><button><span>LOST ARK</span></button></li>
                             <li><button><span>센츄리:에이지 오브 애쉬즈</span></button></li>
                             <li><button><span>테일즈런너</span></button></li>
                         </ul>
                         <div>
-                            <a class="simg-01"><img src="./TestImg/메인_02_썸네일큐레이션배너_로스트아크_card-curation_LM_1658265325294.png"></a>                              
+                            <a class="simg-01"><img src="./TestImg/메인_01_썸네일-1.png"></a>                              
                         </div>                        
-                    </div>                   
+                    </div>
+                    <script>
+                        btn = document.querySelectorAll('.condiv-02-01 li  button');
+                        btn02 = document.querySelectorAll('.condivm-02-menu  button');
+                        elSpan = document.querySelectorAll('.condiv-02-01 li button span');
+                        elimg = document.querySelector('.simg-01 img');   
+                        
+                        btn02.forEach((ele,key)=>{                                                       
+                            ele.addEventListener('click',function(){  
+                                elimg.src = `./TestImg/메인_0${key+1}_썸네일.png`;                                                             
+                               
+                            });
+                        });
+                        
+                        let btnck=0;  
+                        btn[0].style =`background-color:#1f1f1f;`;
+                        elSpan[0].style = `color:#fff;`;                                    
+                        btn.forEach((ele,key)=>{                                                       
+                            ele.addEventListener('click',function(){  
+                                elimg.src = `./TestImg/메인_0${key+1}_썸네일-1.png`;
+                                btn[btnck].style = `background-color:#fff; `; 
+                                elSpan[btnck].style = `color:626262;`;
+                                this.style = `
+                                    background-color:#1f1f1f;                                    
+                                `;
+                                elSpan[key].style = `color:#fff;`;
+                                btnck = key;                                
+                               
+                            });
+                        });
+                       
+                    </script>                  
                 </div>
             </div>
         </div>
@@ -494,7 +779,7 @@
             <div>
                 <h2>STOVE추천게임</h2>
             </div>
-            <ul>
+            <ul class="mhdiv-03-btn01">
                 <li>
                     <button><span>이달의 신작 인디게임</span></button>
                 </li>
@@ -507,6 +792,31 @@
                 <li>
                     <button><span>PC 온라인 게임</span></button>
                 </li>
+                <script>
+                   
+                    btn03 = document.querySelectorAll('.mhdiv-03-btn01 li button');
+                    elSpan03 = document.querySelectorAll('.mhdiv-03-btn01 li button span');
+                    
+                      
+                    let btn0303=0;  
+                    btn03[0].style =`background-color:#1f1f1f;`;
+                    elSpan03[0].style = `color:#fff;`;                                    
+                        btn03.forEach((ele,key)=>{                                                       
+                            ele.addEventListener('click',function(){                                  
+                                btn03[btn0303].style = `background-color:#fff; `; 
+                                elSpan03[btn0303].style = `color:626262;`;
+                                this.style = `
+                                    background-color:#1f1f1f;                                    
+                                `;
+                                elSpan03[key].style = `color:#fff;`;
+                                btn0303 = key;                                
+                               
+                            });
+                        });
+
+                    console.log(elSpan03);
+                                 
+                </script>  
             </ul>
             <ul>
                 <li>
@@ -659,21 +969,22 @@
                         <img src="https://www.onstove.com/assets/images/main/game-exhibition-img13.png">
                         <span>STOVE 인디게임<br>더 보러가기</span>
                     </a>
-                </li>                              
+                </li>   
+                <div class="mhdiv-05">
+                    <ul>
+                        <li>
+                            <a><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_08_2단배너__스토브커뮤니티_main_2nd_PC_1658265108207.png"></a>
+                            <span>STOVE 커뮤니티에서<br>새로운 소식을 확인하세요.</span>
+                        </li>
+                        <li>
+                            <a><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_08_2단배너_클라이언트_main_2nd_PC_1658265115805.png"></a>
+                            <span>STOVE 클라이언트와<br>앱을 설치해 보세요.</span>
+                        </li>
+                    </ul>
+                </div> 
+                                           
             </ul>          
         </div>
-        <div class="mhdiv-05">
-            <ul>
-                <li>
-                    <a><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_08_2단배너__스토브커뮤니티_main_2nd_PC_1658265108207.png"></a>
-                    <span>STOVE 커뮤니티에서<br>새로운 소식을 확인하세요.</span>
-                </li>
-                <li>
-                    <a><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_08_2단배너_클라이언트_main_2nd_PC_1658265115805.png"></a>
-                    <span>STOVE 클라이언트와<br>앱을 설치해 보세요.</span>
-                </li>
-            </ul>
-        </div> 
         
         <div class="enddiv">
             <footer>
