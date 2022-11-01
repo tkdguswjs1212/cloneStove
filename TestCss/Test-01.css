@@ -672,7 +672,6 @@ a:hover , button:hover{
     font-size: 15px;
 }
     /* 03번메뉴 */
-
 /* 두번째 배너 */
 
 .condiv-02{
@@ -1022,10 +1021,12 @@ h2{
     top: 3%;
     color: #fff;
     background-color: #f00;
-    width: 45px;
+    min-width: 45px;
+    padding: 0 10px;
     height: 20px;
     text-align: center;
     font-size: 13px;
+    
 }
 
 .mhdiv-03 > ul:nth-of-type(2) img{
@@ -1787,7 +1788,7 @@ h2{
     }
     
     .mhdiv-01-bg >div > div > a >span{  
-        
+        width: 300px;
         color: #fff;
         font-size: 1.2rem;
     }
@@ -2031,7 +2032,8 @@ h2{
         top: 3%;
         color: #fff;
         background-color: #f00;
-        width: 45px;
+        min-width: 45px;
+        padding: 0 10px;
         height: 20px;
         text-align: center;
         font-size: 13px;
@@ -3029,12 +3031,13 @@ h2{
         display: flex;
         justify-content: center;
         align-items: center;    
-        padding-left:  20px;        
+        padding-left: 5px;
+        
     }
     
-    .mhdiv-01-bg >div > div > a >span{    
+    .mhdiv-01-bg >div > div > a >span{          
         color: #fff;
-        font-size: 1.0rem;
+        font-size: 0.8rem;
         
     }
     
@@ -3274,7 +3277,8 @@ h2{
         top: 3%;
         color: #fff;
         background-color: #f00;
-        width: 45px;
+        min-width: 45px;
+        padding: 0 10px;
         height: 20px;
         text-align: center;
         font-size: 13px;

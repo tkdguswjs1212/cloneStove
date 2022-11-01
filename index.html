@@ -439,11 +439,10 @@
                         let hideMenus = [hideMenu,hideMenu1,hideMenu2,menu02menu,menu03menu];
                         let ck = 3,num=0;                        
                         btns.forEach((ele,key)=>{
+                            if(window.innerWidth > 768 ){
+                                ele.addEventListener('click',function(){                         
+                                
                             
-                            ele.addEventListener('click',function(){ 
-                                
-                                console.log(ck, key);
-                                
                                 hideMenus[ck].style.display =`none`;                                                  
                                 if(key==4){                                                                        
                                 hideMenus[key].style.display = `flex`;                                
@@ -468,7 +467,9 @@
                                         }                                        
                                 }
                                 ck =key;
+                                console.log(ck, key);
                             });
+                            }                           
                         });                    
                             
                         // bmenuSpan hdiv-01
@@ -764,33 +765,9 @@
                 <li>
                     <button><span>PC 온라인 게임</span></button>
                 </li>
-                <script>
-                   
-                    btn03 = document.querySelectorAll('.mhdiv-03-btn01 li button');
-                    elSpan03 = document.querySelectorAll('.mhdiv-03-btn01 li button span');
-                    
-                      
-                    let btn0303=0;  
-                    btn03[0].style =`background-color:#1f1f1f;`;
-                    elSpan03[0].style = `color:#fff;`;                                    
-                        btn03.forEach((ele,key)=>{                                                       
-                            ele.addEventListener('click',function(){                                  
-                                btn03[btn0303].style = `background-color:#fff; `; 
-                                elSpan03[btn0303].style = `color:626262;`;
-                                this.style = `
-                                    background-color:#1f1f1f;                                    
-                                `;
-                                elSpan03[key].style = `color:#fff;`;
-                                btn0303 = key;                                
-                               
-                            });
-                        });
-
-                    console.log(elSpan03);
-                                 
-                </script>  
+              
             </ul>
-            <ul>
+            <ul class="mhdiv-03-btn01M">
                 <li>
                     <div>                        
                         <span><img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/귀곡임시이미지_1664432818696.jpg"></span>
@@ -799,13 +776,12 @@
                     <div class="mhdiv-03-ul-02">
                         <div>
                             <h3>귀곡팔황(Tale of Immortal)</h3>
-                            <span>#스토브한글화 #시간순삭 #소문의띵작</span>
+                            <p>#스토브한글화 #시간순삭 #소문의띵작</p>
                         </div>
                         <div>
                             <span>-20%</span>
                             <span>￦16.400</span>
                         </div>
-
                     </div>
                 </li>
                 <li>
@@ -816,7 +792,7 @@
                     <div class="mhdiv-03-ul-02">
                         <div>
                             <h3>던전 오브 나흘벅: 더 아뮬렛 오브 카오스</h3>
-                            <span>#턴제 #소문의띵작 #스토브한글화</span>
+                            <p>#턴제 #소문의띵작 #스토브한글화</ㅔ>
                         </div>
                         <div>
                             <span>-60%</span>
@@ -833,7 +809,7 @@
                     <div class="mhdiv-03-ul-02">
                         <div>
                             <h3>노마드 서바이벌 (Nomad Survival)</h3>
-                            <span>#2D #픽셀그래픽 #스토브한글화</span>
+                            <p>#2D #픽셀그래픽 #스토브한글화</p>
                         </div>
                         <div>
                             <span>-10%</span>
@@ -850,7 +826,7 @@
                     <div class="mhdiv-03-ul-02">
                         <div>
                             <h3>잉글렛</h3>
-                            <span>#힐링 #영상미 #스토브한글화</span>
+                            <p>#힐링 #영상미 #스토브한글화</p>
                         </div>
                         <div>
                             <span>-25%</span>
@@ -860,6 +836,155 @@
                     </div>
                 </li>
             </ul>
+            <!-- STOVE추천게임 스크립트 -->
+            <script>
+                mhdi01MB = document.querySelectorAll('.mhdiv-03-btn01M > li > div > b');
+                mhdi01Mbtn = document.querySelectorAll('.mhdiv-03-btn01 li button');
+                mhdi01MImg = document.querySelectorAll('.mhdiv-03-btn01M > li > div > span > img');
+                mhdi01MTextH = document.querySelectorAll('.mhdiv-03-btn01M > li > div > div > h3');
+                mhdi01MTextP = document.querySelectorAll('.mhdiv-03-btn01M > li > div > div > p');
+                mhdi01MTextS = document.querySelectorAll('.mhdiv-03-btn01M > li > div > div > span');
+                console.log(mhdi01MTextS);
+                let mhdi01MImgIn = [["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/귀곡임시이미지_1664432818696.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_나흘벅card-curation_default.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_NomadSurvivalcard_NomadSurvival_default_1664251504178.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_elcard_Ynglet_default_1664861051245.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_블카_card-curation.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_30일어나더card-curation_default.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너card-curation_default_1665634071363.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너card-curation_default_1666671373066.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/카드기본_1666069829167.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_vampirecard_lovein_default_1666314215723.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_songcard_song_default_1666670888240.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_warcard_war_default_1666671104299.jpg"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/card-curation_century.png"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/card-curation_lostark_1658480641524.png"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/card-curation_kards.png"],
+                                    ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/card-curation_talesrunner_1658480602819.png"]
+                                    
+                                ];
+
+                let mhdi01MTextHIn = [  ['귀곡팔황(Tale of Immortal)'],
+                                        ['던전 오브 나흘벅: 더 아뮬렛 오브 카오스'],
+                                        ['노마드 서바이벌 (Nomad Survival)'],
+                                        ['잉글렛'],
+                                        ['블랙 아카데미'],
+                                        ['30일 어나더'],
+                                        ['문경새재'],
+                                        ['블루트릭스'],
+                                        ['이모탈 라이프-신령의 밭'],
+                                        ['뱀파이어 서바이버즈'],
+                                        ['그녀가 다시 노래할 때까지'],
+                                        ['눈 떠보니 임진왜란이었다'],                                        
+                                        ['센추리:에이지 오브 애쉬즈'],
+                                        ['LOST ARK'],
+                                        ['KARDS'],
+                                        ['테일즈런너']
+                                    ];
+                let mhdi01MTextPIn = [  ['#스토브한글화 #시간순삭 #소문의띵작'],
+                                        ['#멀티엔딩 #감동적인서사'],
+                                        ['#2D #픽셀그래픽 #조작중심'],
+                                        ['#2D #높은난이도 #힐링'],
+                                        ['#2D #남성취향'],
+                                        ['#턴제 #소문의띵작 #스토브한글화'],
+                                        ['#2D #픽셀그래픽 #스토브한글화'],
+                                        ['#힐링 #영상미 #스토브한글화'],
+                                        ['#스토브한글화 #소문의띵작'],
+                                        ['#2D #픽셀그래프 #싱글플레이'],
+                                        ['#2D #남성취향 #멀티엔딩'],
+                                        ['#조작중심 #콘트롤러지원 #싱글플레이'],
+                                        ['#PC #슈팅'],
+                                        ['#PC #MMORPG'],
+                                        ['#PC #2차세계대전_카드배틀_CCG'],
+                                        ['#PC #Racing']                                          
+                                    ];
+
+                let mhdi01MTextSIn = [  ['-20%'],
+                                        ['-60%'],
+                                        ['-10%'],
+                                        ['-25%'],
+                                        [''],
+                                        [''],
+                                        ['-50%'],
+                                        ['-40%'],
+                                        ['-20%'],
+                                        ['-20%'],
+                                        ['-10%'],
+                                        ['-10%'],
+                                        [''],
+                                        [''],
+                                        [''],
+                                        ['']
+                                        ];
+                let mhdi01MTextSIn1 = [ ['￦16,400'],
+                                        ['￦14,400'],
+                                        ['￦2,970'],
+                                        ['￦5,010'],
+                                        ['￦15,000'],
+                                        ['￦18,500'],
+                                        ['￦8,250'],
+                                        ['￦2,340'],
+                                        ['￦5,010'],
+                                        ['￦15,750'],
+                                        ['￦4,000'],
+                                        ['￦4,500'],
+                                        [''],
+                                        [''],
+                                        [''],
+                                        [''],
+                                        ['']                                        
+                                        ];
+                let k =0, j=4, l=0;
+                let displayNone = `none`;
+                let displayblock = `block`;
+                let mhdi01MBSU = [['SALE'],['UPDATE']];
+                mhdi01Mbtn.forEach((ele,key)=>{
+                  
+                    ele.addEventListener('click',()=>{
+                        for(let m=0; m<4; m++){
+                                mhdi01MB[m].style = `background:#ff0000`;                            
+                            }     
+                        if(key == 0 ){
+                            k =0; j=4; l=0;
+                            mhdi01MB[0].style.display = displayblock;
+                            mhdi01MB[1].style.display = displayblock;
+                            mhdi01MB[2].style.display = displayblock;
+                            mhdi01MB[3].style.display = displayblock;
+                        }
+                        if(key == 1){
+                            k =4;j=8; l=0;
+                            mhdi01MB[0].style.display = displayNone;
+                            mhdi01MB[1].style.display = displayNone;
+                            mhdi01MB[2].style.display = displayblock;
+                            mhdi01MB[3].style.display = displayblock;
+                        }
+                        if(key == 2){
+                            k =8;j=12;l=0;
+                            mhdi01MB[0].style.display = displayblock;
+                            mhdi01MB[1].style.display = displayblock;
+                            mhdi01MB[2].style.display = displayblock;
+                            mhdi01MB[3].style.display = displayblock;
+                        }
+                        if(key == 3){
+                            k =12;j=16; l=1;
+                            mhdi01MB[0].style.display = displayNone;
+                            mhdi01MB[1].style = `background:#d869d8`;
+                            mhdi01MB[2].style = `background:#d869d8`;
+                            mhdi01MB[3].style = `background:#d869d8`;
+                        }
+                        for(let i=0; i<j;i++){
+                            mhdi01MImg[i].src = mhdi01MImgIn[i+k];
+                            mhdi01MTextH[i].innerText = mhdi01MTextHIn[i+k];
+                            mhdi01MTextP[i].innerText = mhdi01MTextPIn[i+k];
+                            mhdi01MTextS[i*2].innerText = mhdi01MTextSIn[i+k];
+                            mhdi01MTextS[i*2+1].innerText = mhdi01MTextSIn1[i+k];                           
+                            mhdi01MB[i].innerText = mhdi01MBSU[l];
+                        }
+                    })
+                })
+
+            </script>            
+            <!-- STOVE추천게임 스크립트 -->
         </div>
         <div class="mhdiv-04">
             <div class="mhdiv-04-01">
@@ -961,9 +1086,9 @@
         <div class="enddiv">
             <footer>
                 <ul>
-                    <li>
+                    <li class="notice">
                         <b>공지사항</b>
-                        <b>9/27(화) 보안 업데이트 완료</b>
+                        <b></b>
                     </li>
                     <li>
                         <a><span>회사소개</span></a>
@@ -1000,6 +1125,53 @@
                 </ul>
             </footer>
         </div>
+        <script>
+            
+            window.onresize = function(){
+                document.location.reload();
+            }
+
+            btn03 = document.querySelectorAll('.mhdiv-03-btn01 li button');
+            elSpan03 = document.querySelectorAll('.mhdiv-03-btn01 li button span');
+            notice = document.querySelectorAll('.notice b');
+            let textNum = [
+                            ['10/19(수) 가상계좌 서비스 보안 강화에 따른 캐시 충전 서비스 점검 안내(완료)'],
+                            ['10/15(토) 카카오페이 결제 시스템 이용 불가 안내(해결)'],
+                            ['10/10(월) 한글날 대체 공휴일 관련 고객센터 휴무 안내'],
+                            ['9/27(화) 보안 업데이트 완료']
+                        ];
+            let numt=0, textNumlength = 4;                        
+            notice[1].innerText = textNum[numt];  
+            setInterval(()=>{                
+                if(numt<textNumlength-1){
+                    numt++;    
+                }else{
+                    numt = 0;
+                }
+                notice[1].innerText = textNum[numt];                          
+            },3000);
+
+
+              
+            let btn0303=0;  
+            btn03[0].style =`background-color:#1f1f1f;`;
+            elSpan03[0].style = `color:#fff;`;                                    
+                btn03.forEach((ele,key)=>{                                                       
+                    ele.addEventListener('click',function(){                                  
+                        btn03[btn0303].style = `background-color:#fff; `; 
+                        elSpan03[btn0303].style = `color:626262;`;
+                        this.style = `
+                            background-color:#1f1f1f;                                    
+                        `;
+                        elSpan03[key].style = `color:#fff;`;
+                        btn0303 = key;                                
+                       
+                    });
+                });
+
+            
+                         
+        </script>  
     </div>
     
 </body>

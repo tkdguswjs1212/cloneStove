@@ -130,24 +130,26 @@
                 
                 btn.forEach((ele,key)=>{
                     btn[0].style = `color:#ff5000;`;
+                    btnMenu02.style.display = 'none';                           
+                    btnMenu01.style.display = 'block';
                     ele.addEventListener('click',function(){
                         ele.style = `color:#ff5000;`;
                         
-                        if(key == 0){                            
-                            btnMenu02.style.display = 'none';
-                            btnMenu01.style.display = 'block';
-                            
-                            btn[1].style = `color:#aaaaaa`;
-                            btnBorder[0].style = `border-bottom: 2px solid #ff5000;`;
-                            btnBorder[1].style = `border-bottom: 2px solid #aaaaaa;`;
-                            
-                        }else{
-                            btn[0].style = `color:#aaaaaa`;
-                            btnMenu01.style.display = 'none';                           
+                        if(key == 1){                            
+                            btnMenu01.style.display = 'none';
                             btnMenu02.style.display = 'block';
-                          
+                            
+                            btn[0].style = `color:#aaaaaa`;
                             btnBorder[1].style = `border-bottom: 2px solid #ff5000;`;
                             btnBorder[0].style = `border-bottom: 2px solid #aaaaaa;`;
+                            
+                        }else{
+                            btn[1].style = `color:#aaaaaa`;
+                            btnMenu02.style.display = 'none';                           
+                            btnMenu01.style.display = 'block';
+                          
+                            btnBorder[0].style = `border-bottom: 2px solid #ff5000;`;
+                            btnBorder[1].style = `border-bottom: 2px solid #aaaaaa;`;
                         }              
                             
                     });
