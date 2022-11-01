@@ -938,9 +938,26 @@
                 let displayNone = `none`;
                 let displayblock = `block`;
                 let mhdi01MBSU = [['SALE'],['UPDATE']];
+                function mouseOver(Img,i){
+                    Img[i].addEventListener('mouseover',()=>{
+                        Img[i].src = "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/card-curation_century_hover_1658480644093.gif";
+                                
+                    });
+                };
+                function mouseOut(Img,i){
+                    Img[i].addEventListener('mouseout',()=>{
+                        Img[i].src = "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/card-curation_lostark_1658480641524.png";
+                                
+                    });
+                };
+
+                
+
                 mhdi01Mbtn.forEach((ele,key)=>{
                   
+                  
                     ele.addEventListener('click',()=>{
+                     
                         for(let m=0; m<4; m++){
                                 mhdi01MB[m].style = `background:#ff0000`;                            
                             }     
@@ -950,28 +967,39 @@
                             mhdi01MB[1].style.display = displayblock;
                             mhdi01MB[2].style.display = displayblock;
                             mhdi01MB[3].style.display = displayblock;
+                          
+                            
                         }
-                        if(key == 1){
+                        else if(key == 1){
+                          
                             k =4;j=8; l=0;
                             mhdi01MB[0].style.display = displayNone;
                             mhdi01MB[1].style.display = displayNone;
                             mhdi01MB[2].style.display = displayblock;
                             mhdi01MB[3].style.display = displayblock;
+                         
                         }
-                        if(key == 2){
+                        else if(key == 2){
+                          
                             k =8;j=12;l=0;
                             mhdi01MB[0].style.display = displayblock;
                             mhdi01MB[1].style.display = displayblock;
                             mhdi01MB[2].style.display = displayblock;
-                            mhdi01MB[3].style.display = displayblock;
+                            mhdi01MB[3].style.display = displayblock;  
+                                                   
                         }
-                        if(key == 3){
+                        else if(key == 3){
                             k =12;j=16; l=1;
                             mhdi01MB[0].style.display = displayNone;
                             mhdi01MB[1].style = `background:#d869d8`;
                             mhdi01MB[2].style = `background:#d869d8`;
                             mhdi01MB[3].style = `background:#d869d8`;
+                           
+                           
                         }
+                            
+                        
+                        
                         for(let i=0; i<j;i++){
                             mhdi01MImg[i].src = mhdi01MImgIn[i+k];
                             mhdi01MTextH[i].innerText = mhdi01MTextHIn[i+k];
@@ -981,6 +1009,7 @@
                             mhdi01MB[i].innerText = mhdi01MBSU[l];
                         }
                     })
+                   
                 })
 
             </script>            
