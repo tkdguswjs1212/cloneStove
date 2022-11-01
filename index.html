@@ -434,71 +434,43 @@
                         const menu02menu = document.querySelector('.hdiv-02-menu01');
                         const menu03btn = document.querySelector('.bmenuSpan');                     
                         const menu03menu = document.querySelector('.hdiv-02-02-m');
-                        let ck=0;
-                        function clickMenu(menuBtn,hideMenu,displayTpye){
-                            menuBtn.addEventListener('click',function(){ 
-                            ck++;                                   
+
+                        let btns = [hideMenuBtn,hideMenuBtn1,hideMenuBtn2,menu02btn,menu03btn];
+                        let hideMenus = [hideMenu,hideMenu1,hideMenu2,menu02menu,menu03menu];
+                        let ck = 3,num=0;                        
+                        btns.forEach((ele,key)=>{
                             
-                            if(ck == 1 ){                              
-                                hideMenu.style.display = displayTpye;
-                            }else if(ck >1){
-                                ck=0;
-                                hideMenu.style.display = `none`;
-                            }
+                            ele.addEventListener('click',function(){ 
+                                
+                                console.log(ck, key);
+                                
+                                hideMenus[ck].style.display =`none`;                                                  
+                                if(key==4){                                                                        
+                                hideMenus[key].style.display = `flex`;                                
+                                }else{
+                                hideMenus[key].style.display = `block`;                                
+                                }   
+                                                         
+                                if(ck == key){
+                                    num++;
+                                    hideMenus[key].style.display =`none`;  
+                                        
+                                    if(num == 2){
+                                        num = 0;
+                                        if(key==4){                                                                        
+                                        hideMenus[key].style.display = `flex`;                                
+                                        }else{
+                                        hideMenus[key].style.display = `block`;                                
+                                        }
+                                       
+                                    }else{
+                                        hideMenus[key].style.display =`none`;  
+                                        }                                        
+                                }
+                                ck =key;
                             });
-                        };
-                        clickMenu(menu02btn,menu02menu,`block`);
-
-                        menu03btn.addEventListener('click',function(){ 
-                            ck++;                                   
+                        });                    
                             
-                            if(ck == 1 && (window.innerWidth > 1440)){                              
-                                menu03menu.style.display = `flex`;
-                            }else if(ck >1){
-                                ck=0;
-                                menu03menu.style.display = `none`;
-                            }
-                        });  
-
-                       
-                        
-
-                        hideMenuBtn.addEventListener('click',function(){ 
-                            ck++;                                    
-                            
-                            if(ck == 1){
-                                hideMenu1.style.display = `none`;
-                                hideMenu2.style.display = `none`;
-                                hideMenu.style.display = `flex`;
-                            }else if(ck >1){
-                                ck=0;
-                                hideMenu.style.display = `none`;
-                            }
-                        });  
-                        hideMenuBtn1.addEventListener('click',function(){ 
-                            ck++;                                    
-                           
-                            if(ck == 1){
-                                hideMenu.style.display = `none`;
-                                hideMenu2.style.display = `none`;
-                                hideMenu1.style.display = `flex`;
-                            }else if(ck >1){
-                                ck=0;
-                                hideMenu1.style.display = `none`;
-                            }
-                        }); 
-                        hideMenuBtn2.addEventListener('click',function(){ 
-                            ck++;                                    
-                           
-                            if(ck == 1){
-                                hideMenu1.style.display = `none`;
-                                hideMenu.style.display = `none`;
-                                hideMenu2.style.display = `flex`;
-                            }else if(ck >1){
-                                ck=0;
-                                hideMenu2.style.display = `none`;
-                            }
-                        });                       
                         // bmenuSpan hdiv-01
                         const Condition01 = document.querySelector('.hdiv-01');
                         const Condition02 = document.querySelector('.bmenuSpan');

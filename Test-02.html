@@ -11,14 +11,14 @@
 <body>
     <div class="header">
         <div>
-            <a href="http://127.0.0.1:5500/Test-01/Test-01.html"><img src="./TestImg/logo-stove.svg"></a>
+            <a href="index.html"><img src="./TestImg/logo-stove.svg"></a>
         </div>
     </div>
     <div class="body">
         <div class="body01">
             <div>
-                <div><button>아이디 로그인</button></div>
-                <div><button>일회용 로그인</button></div>
+                <div><button value="0">아이디 로그인</button></div>
+                <div><button value="1">일회용 로그인</button></div>
             </div>
             <div class="lg">
                 <ul class="mlg">
@@ -82,9 +82,82 @@
                         </div>
                     </li>
                 </ul>
-                
-                
+                <ul class="mlg01">
+                    <li>
+                        <p>STOVE 모바일 앱 실행 > 전체메뉴 > 보안설정 > 일회용 로그인 선택 후</p>
+                        <span>생성되는 일회용 로그인 번호 8자리를 입력해주세요.</span>
+                    </li>
+                    <li>
+                        <div>
+                            <div>                        
+                                <input type="password" name="PW01" placeholder="4자리">
+                            </div>
+                            <div>                        
+                                <input type="password" name="PW02" placeholder="4자리">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button>로그인</button>
+                    </li>
+                    <li>
+                        <a href="">STOVE APP 설치</a>
+                        <a href="">일회용 로그인 안내</a>
+                    </li>
+                    <li>
+                        <div>
+                            <select name = 'language'>
+                                <option>한국어</option>
+                                <option>Detucsh English (US)</option>
+                                <option>Español (LA)</option>
+                                <option>Français</option>
+                                <option>Português (BR)</option>
+                                <option>中文 (繁體)</option>
+                                <option>日本語</option>
+                                <option>ภาษาไทย</option>
+                                <option>Italiano</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+                </ul>               
             </div>
+            <script>
+                const btn = document.querySelectorAll('.body01 > div > div > button ');
+                const btnBorder = document.querySelectorAll('.body01 > div > div');
+                const btnMenu01 = document.querySelector('.mlg');
+                const btnMenu02 = document.querySelector('.mlg01');
+                
+                btn.forEach((ele,key)=>{
+                    btn[0].style = `color:#ff5000;`;
+                    ele.addEventListener('click',function(){
+                        ele.style = `color:#ff5000;`;
+                        
+                        if(key == 0){                            
+                            btnMenu02.style.display = 'none';
+                            btnMenu01.style.display = 'block';
+                            
+                            btn[1].style = `color:#aaaaaa`;
+                            btnBorder[0].style = `border-bottom: 2px solid #ff5000;`;
+                            btnBorder[1].style = `border-bottom: 2px solid #aaaaaa;`;
+                            
+                        }else{
+                            btn[0].style = `color:#aaaaaa`;
+                            btnMenu01.style.display = 'none';                           
+                            btnMenu02.style.display = 'block';
+                          
+                            btnBorder[1].style = `border-bottom: 2px solid #ff5000;`;
+                            btnBorder[0].style = `border-bottom: 2px solid #aaaaaa;`;
+                        }              
+                            
+                    });
+                   
+                });
+
+
+
+                console.log(btn);
+            </script>
         </div>
     </div>
           
