@@ -479,15 +479,27 @@
                         const Condition01 = document.querySelector('.hdiv-01');
                         const Condition02 = document.querySelector('.bmenuSpan');
                         const Exit = document.querySelector('.exit');
-
+                        
+                         
+                        function scrollenventTO(){                                                                  
+                            if(window.pageYOffset > 230){                                            
+                                window.scrollTo({
+                                left:0,
+                                top:230,                   
+                                });
+                            }                                 
+                                                                  
+                        };
                         function test(){                                                       
+                           
                             
                             Condition02.addEventListener('click',function(){
-                                document.getElementById("bgmenu").style.display ='block';
-                                
+                                document.getElementById("bgmenu").style.display ='block';                                   
+                                window.addEventListener('scroll',scrollenventTO);
                             });
                             Exit.addEventListener('click',function(){
                                 document.getElementById("bgmenu").style.display ='none';
+                                window.removeEventListener('scroll',scrollenventTO);
                             });
                             
                         };                        
@@ -1014,10 +1026,12 @@
                         }
                     })
                    
-                })
+                })    
+           
+                 
+                
+                
 
-             
-               
             </script>            
             <!-- STOVE추천게임 스크립트 -->
         </div>
@@ -1164,7 +1178,7 @@
             
             window.onresize = function(){
                 document.location.reload();
-            }
+            };
 
             btn03 = document.querySelectorAll('.mhdiv-03-btn01 li button');
             elSpan03 = document.querySelectorAll('.mhdiv-03-btn01 li button span');
