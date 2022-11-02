@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>STOVE</title>
     <Link href="./TestCss/Test-01.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,12 +20,14 @@
     <meta property="twitter:title"              content="STOVE" />
     <meta property="twitter:description"        content="STOVE main site" />
     <meta property="twitter:image"              content="./TestImg/메인_01_통합형배너_스토브보안_main_long_LMS.png" />
+    <link rel ="icon" href="./TestImg/rogo.jpg">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+   
   />  
 </head>
-<body>
+<body class ='bodyMain'>
     <div class="main">
         <header class="mheader">
             <div class="mhdiv">
@@ -440,6 +442,7 @@
                         let ck = 3,num=0;                        
                         btns.forEach((ele,key)=>{
                             if(window.innerWidth > 768 ){
+                                
                                 ele.addEventListener('click',function(){                         
                                 
                             
@@ -481,6 +484,7 @@
                             
                             Condition02.addEventListener('click',function(){
                                 document.getElementById("bgmenu").style.display ='block';
+                                
                             });
                             Exit.addEventListener('click',function(){
                                 document.getElementById("bgmenu").style.display ='none';
@@ -1012,6 +1016,8 @@
                    
                 })
 
+             
+               
             </script>            
             <!-- STOVE추천게임 스크립트 -->
         </div>
