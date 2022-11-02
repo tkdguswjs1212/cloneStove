@@ -470,7 +470,7 @@
                                         }                                        
                                 }
                                 ck =key;
-                                console.log(ck, key);
+                                
                             });
                             }                           
                         });                    
@@ -860,7 +860,7 @@
                 mhdi01MTextH = document.querySelectorAll('.mhdiv-03-btn01M > li > div > div > h3');
                 mhdi01MTextP = document.querySelectorAll('.mhdiv-03-btn01M > li > div > div > p');
                 mhdi01MTextS = document.querySelectorAll('.mhdiv-03-btn01M > li > div > div > span');
-                console.log(mhdi01MTextS);
+                
                 let mhdi01MImgIn = [["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/귀곡임시이미지_1664432818696.jpg"],
                                     ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_나흘벅card-curation_default.jpg"],
                                     ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_05_카드형큐레이션배너_NomadSurvivalcard_NomadSurvival_default_1664251504178.jpg"],
@@ -1036,19 +1036,18 @@
             <!-- STOVE추천게임 스크립트 -->
         </div>
         <div class="mhdiv-04">
-            <div class="mhdiv-04-01">
-                <a><span>인디 게임</span></a>
-                <a><span>PC 게임</span></a>
-                <a><span>모바일 게임</span></a>
+            <div class="mhdiv-04-013">
+                <a><button>인디 게임</button></a>
+                <a><button>PC 게임</button></a>
+                <a><button>모바일 게임</button></a>
             </div>
             <ul class="mhdiv-04-02">
                 <li>
-                    <div>
                         <a>
                             <img src="https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/Untitled-2_1664432826428.jpg">
                             <span>귀곡팔황</span>
                         </a>                         
-                    </div>                   
+                                      
                 </li>
                 <li>
                     <a>
@@ -1175,6 +1174,108 @@
             </footer>
         </div>
         <script>
+            mhdiv04Btn = document.querySelectorAll('.mhdiv-04-013 > a > button');
+            mhdiv04Img = document.querySelectorAll('.mhdiv-04-02 > li > a > img');
+            mhdiv04Span = document.querySelectorAll('.mhdiv-04-02 > li > a > span');
+            mhdiv04Li = document.querySelectorAll('.mhdiv-04-02 li');            
+            console.log(mhdiv04Li);
+            let mhdiv04Span01 = [
+                ['귀곡팔황'],
+                ['러브 딜리버리'],
+                ['별에게 소원을'],
+                ['블랙 아카데미'],
+                ['던전 오브 나흘벅'],
+                ['연쇄청소부들'],
+                ['브레이브 레이지'],
+                ['백팩 히어로'],
+                ['옥스'],
+                ['비포 유어 아이즈'],
+                ['원 핸드 클래핑'],
+                [`STOVE 인디게임<br>더 보러가기`],
+            ];
+            let mhdiv04Span02 = [
+                ['LOST ARK'],
+                ['테일즈런너'],
+                ['센추리'],
+                ['KARDS'],
+                ['소울워커'],
+                ['툰스푼']
+            ];
+            let mhdiv04Span03 = [
+                ['와일드본'],
+                ['에픽세븐'],
+                ['마술양품점'],
+                ['슈퍼탱크작전'],
+                ['큐라레를 추억하는 사서들'],
+                ['']
+            ];
+            
+            let mhdiv04Img01 = [
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/Untitled-2_1664432826428.jpg"],                
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/_card_curation_러브딜리버리.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/03_별에게소원을_game_display.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/02_블랙아카데미시크릿_game_display.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_나흘벅.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_serial_card_serial_1663893975734.jpg"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_rage_card_rage_1663238985234.jpg"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_백팩히어로.jpg"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_1661832284305.jpg"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_1663647039324.jpg"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_07_게임전시_Clapping_card_Clapping_1664856656461.jpg"],
+                ["https://www.onstove.com/assets/images/main/game-exhibition-img13.png"]
+            ];
+            let mhdiv04Img02 = [
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/lostark_game_display_1658265478223.png"],                
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/talesrunner_game_display_1658265532311.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/century_game_display.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/kards_game_display.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/soulwalker_game_display_1658265560379.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/toonspoon_game_display.png"],                         
+                
+            ];
+            let mhdiv04Img03 = [
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/wildborn_game_display.png"],                
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/epicseven_game_display_1658265610181.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/MagicalAtelier_game_display_1658265696615.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/SuperTankRumble_game_display_1658265725949.png"],
+                ["https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/qurare_game_display_1658265754639.png"],
+                ["./TestImg/ffffffffffffffffffffff.png"]             
+            ];
+            let imgI, imgK,spanI, LiNum, LiNimmini;
+            mhdiv04Btn.forEach((ele,key)=>{                 
+                  
+                  ele.addEventListener('click',()=>{  
+                    if(key == 0){
+                        imgK = 12;
+                        imgI = mhdiv04Img01;
+                        spanI = mhdiv04Span01;
+                    }else if(key == 1){
+                        imgK = 6;
+                        imgI = mhdiv04Img02;
+                        spanI = mhdiv04Span02;
+                    }else if(key == 2){
+                        imgK = 6;
+                       
+                        imgI = mhdiv04Img03;
+                        spanI = mhdiv04Span03;
+                    }
+                       
+                      
+                      for(let i=0; i<imgK;i++){              
+                        LiNum = i+imgK;
+                        mhdiv04Img[i].src = imgI[i];
+                        mhdiv04Span[i].innerText = spanI[i]; 
+                        if(LiNum >=12 ){
+                            LiNum = 0;
+                        }
+                        mhdiv04Li[i].style.display = 'block';
+                        if(key != 0) mhdiv04Li[LiNum].style.display = 'none';
+                                              
+                      }
+                  })
+                 
+              })    
+         
             
             window.onresize = function(){
                 document.location.reload();

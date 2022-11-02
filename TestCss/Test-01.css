@@ -7,6 +7,15 @@ img{
     
    
 }
+.mhdiv-04-013{
+    border-bottom: 1px solid #90939b;
+    padding-bottom: 10px;
+}
+
+.mhdiv-04-013 > a > button{
+    color: #1f1f1f;
+    font-weight: bold;
+}
 
 .condivm-02-menu{display: none;  margin-right: 0;}
 
@@ -1105,7 +1114,7 @@ h2{
     width: 1380px;
     height: 480px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .mhdiv-04-02 li{
