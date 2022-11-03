@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STOVE - 스토브, 식지 않는 재미</title>
     <Link href="./TestCss/Test-01.css" rel="stylesheet">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:url"                content="https://tkdguswjs1212.github.io/cloneStove/" />
@@ -482,10 +483,10 @@
                         
                          
                         function scrollenventTO(){                                                                  
-                            if(window.pageYOffset > 15){                                            
+                            if(window.pageYOffset > 30){                                            
                                 window.scrollTo({
                                 left:0,
-                                top:15,                   
+                                top:30,                   
                                 });
                             }                                 
                                                                   
@@ -593,36 +594,9 @@
                             prevEl: ".swiper-button-prev",
                             },
                         });
-                        let num2=1;
-                        const swiperwrapper = document.querySelectorAll('.swiper-wrapper > div > img')
-                      /*   function time(sec){
-                            setTimeout(function(){
-                            
-                            if(num2 < 6){
-                                num2++;
-                            }else{
-                                num2 =1;
-                            }
-                            time(num2);
-                            console.log(num2);
-                            },2000);
-                            
-                            swiperwrapper.forEach((ele,key)=>{
-                            ele.src = `./TestImg/0${num2}.jpg`;
-                           
-                            if(key == 7)
-                            {
-                                ele.src = `./TestImg/0${1}.jpg`;
-                            }else if(key == 0)
-                            {
-                                ele.src = `./TestImg/0${6}.jpg`;
-                            }           
-                            
-                        })
-                        };
                        
-                        time();
-                         */
+                        const swiperwrapper = document.querySelectorAll('.swiper-wrapper > div > img')
+                   
                         swiperwrapper.forEach((ele,key)=>{
                             ele.src = `./TestImg/0${key}.jpg`;
                            
