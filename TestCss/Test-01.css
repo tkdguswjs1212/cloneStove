@@ -7,6 +7,8 @@ img{
     
    
 }
+
+
 .mhdiv-04-013{
     border-bottom: 1px solid #90939b;
     padding-bottom: 10px;
@@ -2302,7 +2304,7 @@ h2{
     a:hover , button:hover{
         cursor: pointer;
     }
-
+   
     /* 버거메뉴 */
 .bgmenu{
     background-color:rgba(0, 0, 0, 0.2);
@@ -3217,14 +3219,15 @@ h2{
         margin: 20px auto;
         padding: 0 20px;
         
+        
     }
     
     .mhdiv-03 > ul:nth-of-type(1){
         width: 100%;
-        
+        padding-bottom: 15px;
         display: flex;
         justify-content: left;
-        overflow: hidden;
+        overflow-x: scroll;
         margin:  0 0;
     }
     
@@ -3233,7 +3236,7 @@ h2{
         height: 44px;
         padding: 0 15px;
         margin-right: 5px ;
-        
+         
         
     }
     
